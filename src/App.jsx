@@ -1,23 +1,14 @@
-import Timer from "./components/useEffect/Timer"
-import AddNumer from "./components/useState/AddNumer"
-import LoginForm from "./components/useState/LoginForm"
-import TempretureCalculator from "./components/useState/TempretureCalculator"
-import Users from "./components/useState/Users"
+import { useRoutes } from "react-router-dom"
+import routes from "./router/Router"
 
 
 function App() {
+  const routing = useRoutes(routes)
 
   return (
-    <div className="flex flex-col gap-20">
-      {/* useState */}
-      <Users/>
-      <AddNumer/>
-      <LoginForm/>
-      <TempretureCalculator/>
-
-      {/* useEffect */}
-      <Timer/>
-    </div>
+    <>
+      {routing}
+    </>
   )
 }
 

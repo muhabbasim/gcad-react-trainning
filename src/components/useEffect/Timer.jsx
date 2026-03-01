@@ -24,6 +24,7 @@ export default function Timer() {
     }
   }, [timeState]) // Empty dependency array = runs once on mount
 
+
   return (
     <section className='flex gap-4'>
       <div className='bg-teal-700 text-white p-4'>
@@ -31,10 +32,10 @@ export default function Timer() {
       </div>
 
       <button
-        className='p-2 bg-lime-200 cursor-pointer'
+        className={`p-2 bg-lime-200 cursor-pointer ${timeState ? 'bg-red-500 text-white' : 'bg-lime-200 text-black'}`}
         onClick={() => setTimeState(per => !per)}
       >
-        Start Timer
+        {timeState ? "Stop Timer" : "Start Timer"}
       </button>
     </section>
   )
