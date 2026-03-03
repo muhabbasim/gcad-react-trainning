@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function UserCard({ data }) {
   return (
-    <Link to={''}>
+    <Link to={`/dashbord/users/single-user/${data.id}`}>
       <div className="bg-[#0d1b2a] p-6 rounded-lg text-white">
         <div className="w-full">
           <img src={data.image} alt="personal imgae" className="w-full mb-5 rounded-lg"/>

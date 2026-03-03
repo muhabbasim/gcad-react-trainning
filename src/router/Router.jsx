@@ -2,6 +2,7 @@ import DashboardLayout from "../layouts/DashboardLayout";
 import GeneralLayout from "../layouts/GeneralLayout";
 import KashkoolPage from "../pages/Kashkool/KashkoolPage";
 import HomePage from "../pages/home/HomePage";
+import SingleUser from "../pages/single-user/SingleUser";
 import Users from "../pages/users/UsersPage";
 
 const routes = [
@@ -18,7 +19,7 @@ const routes = [
     element: <DashboardLayout/>,
     children: [
       { path: 'users', exact: true, element: <Users/>},
-      // { path: 'users', exact: true, element: <SingleUsers/>},
+      { path: 'users/single-user/:user_id', exact: true, element: <SingleUser/>},
     ]
   },
 ]
